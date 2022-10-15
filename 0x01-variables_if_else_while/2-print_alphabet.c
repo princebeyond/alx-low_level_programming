@@ -1,13 +1,18 @@
 #include <stdio.h>
-/**
- * main - Entry
- * Always: Return (0)
- */
 
+/**
+ * main - Prints the alphabet in lowercase.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	char i;
-	for (i = 'a'; i <= 'z'; i++)
-		printf("%c", i);
+	char letter;
+
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+
+	putchar('\n');
+
 	return (0);
 }
