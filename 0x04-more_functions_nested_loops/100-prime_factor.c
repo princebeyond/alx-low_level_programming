@@ -8,27 +8,24 @@
  */
 int main(void)
 {
-	long int n;
+	long prime = 612852475143, div;
 
-	n = 612852475143;
+	while (div < (prime / 2))
+	{
+		if ((prime % 2) == 0)
+		{
+			prime /= 2;
+			continue;
+		}
 
-	long int div = 2, ans = 0, maxFact;
+		for (div = 3; div < (prime / 2); div += 2)
+		{
+			if ((prime % div) == 0)
+				prime /= div;
+		}
+	}
 
-	while (n != 0)
-	{
-		if (n % div != 0)
-			div = div + 1;
-		else
-	{
-		maxFact = n;
-		n = n / div;
-		if (n == 1)
-	{
-		printf("%d is the largest prime factor !", maxFact);
-		ans = 1;
-		break;
-	}
-	}
-	}
+	printf("%ld\n", prime);
+
 	return (0);
 }
