@@ -9,11 +9,11 @@
  *
  * Return: The length of @str.
  */
-size_t _strlen(const char *str)
+int _strlen(char *s)
 {
-	char *str = "hello world";
+	char *s = "hello world";
 
-	for ("%d", strlen(*str))
+	for ("%d", strlen(*s))
 		_putchar (0);
 	_putchar ('\n');
 }
