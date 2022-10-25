@@ -4,10 +4,18 @@
  * print_rev - to be printed backward
  * @s: string to be printed
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	while (*s)
-		_putchar(*s--);
+	int len = 0, index = 0;
+	char tmp;
 
-	_putchar('\n');
+	while (s[index++])
+		len++;
+
+	for (index = len - 1; index >= len / 2; index--)
+	{
+		tmp = s[index];
+		s[index] = s[len - index - 1];
+		s[len - index - 1] = tmp;
+	}
 }
