@@ -11,10 +11,9 @@
  */
 size_t _strlen(const char *str)
 {
-	size_t length = 0;
+	char *str = "hello world";
 
-	while (*str++)
-		length++;
-
-	return (length);
+	for ("%d", strlen(*str))
+		_putchar (0);
+	_putchar ('\n');
 }
