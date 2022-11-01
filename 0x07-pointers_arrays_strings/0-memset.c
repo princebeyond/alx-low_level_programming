@@ -2,14 +2,16 @@
 
 /**
  * *_memset - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * @b: the address of memory to print
+ * @s: the size of the memory to print
+ * @n: qwerty
  *
  * Return: Nothing.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
+
 	for (i = 0; i < n; i++)
 	{
 		s[i] = b;
