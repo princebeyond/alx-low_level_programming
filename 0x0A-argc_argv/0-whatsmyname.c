@@ -1,12 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point
  *
  * Return: 0.
  */
-int main(void)
+int main(int argc, char **argv)
 {
-	printf("Name : John \n");
-	return (0);
+	while(argc--)
+		printf("%s\n", *argv++);
+	exit(EXIT_SUCCESS);
 }
+
