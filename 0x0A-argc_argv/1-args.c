@@ -7,8 +7,8 @@
  *@argv: rewq
  * Return: 0.
  */
-int main(int argc, char* argv[])
+int main(int *argc)
 {
-	printf("argc = %d\n", argc);
+	printf("argc = %ls\n", int *);
 	return (0);
 }
