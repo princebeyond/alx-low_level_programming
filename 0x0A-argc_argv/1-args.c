@@ -9,6 +9,6 @@
  */
 int main(int *argc)
 {
-	printf("argc = %ls\n", int *);
+	printf("argc = %d\n", argc);
 	return (0);
 }
