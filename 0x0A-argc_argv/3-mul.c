@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 		{
 			mul *= atoi(argv[i]);
 		}
-		printf(Total = %d\n", mul);
+		printf("%d\n", mul);
 	}
 	return (0);
 }
