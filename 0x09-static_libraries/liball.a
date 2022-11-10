@@ -1,0 +1,185 @@
+!<arch>
+0-isupper.c/    0           0     0     644     78        `
+#include <stdio.h>
+
+int _isupper(int c)
+{
+	printf("qwerty\n");
+	return (0);
+}
+0-memset.c/     0           0     0     644     172       `
+#include <stdio.h>
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	printf("qwert\n");
+}
+int main(void)
+{
+	char *_memset(char *s, char b, unsigned int n);
+	return (0);
+}
+0-strcat.c/     0           0     0     644     95        `
+#include <stdio.h>
+
+char *_strcat(char *dest, char *src)
+{
+	printf("qwerty\n");
+	return (0);
+}
+
+100-atoi.c/     0           0     0     644     77        `
+#include <stdio.h>
+
+int _atoi(char *s)
+{
+	printf("qwerty\n");
+	return (0);
+}
+
+1-isdigit.c/    0           0     0     644     77        `
+#include <stdio.h>
+
+int _isdigit(int c)
+{
+	printf("qwwrty\n");
+	return(0);
+}
+
+1-memcpy.c/     0           0     0     644     111       `
+
+#include <stdio.h>
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	printf("qwerty\n");
+	return(0);
+}
+
+1-strncat.c/    0           0     0     644     104       `
+#include <stdio.h>
+
+char *_strncat(char *dest, char *src, int n)
+{ 
+	printf("qwerty\n");
+	return (0);
+}
+2-strchr.c/     0           0     0     644     90        `
+#include <stdio.h>
+
+char *_strchr(char *s, char c)
+{
+	printf("qwertyu\n");
+	return (0);
+}
+2-strlen.c/     0           0     0     644     79        `
+#include <stdio.h>
+
+int _strlen(char *s)
+{
+	printf("qwerty\n");
+	return (0);
+}
+
+2-strncpy.c/    0           0     0     644     104       `
+
+#include <stdio.h>
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	printf("qwerty\n");
+	return (0);
+}
+3-islower.c/    0           0     0     644     79        `
+
+#include <stdio.h>
+
+int _islower(int c)
+{
+	printf("qwerty\n");
+	return (0);
+}
+
+3-puts.c/       0           0     0     644     79        `
+
+#include <stdio.h>
+
+void _puts(char *s)
+{
+	printf("qwerty\n");
+	return (0);
+}
+
+3-strcmp.c/     0           0     0     644     90        `
+#include <stdio.h>
+
+int _strcmp(char *s1, char *s2)
+{
+	printf("qwerty\n");
+	return (0);
+}
+3-strspn.c/     0           0     0     644     103       `
+#include <stdio.h>
+
+unsigned int _strspn(char *s, char *accept)
+{
+	printf("qwertyy\n");
+	return (0);
+}
+
+4-isalpha.c/    0           0     0     644     78        `
+#include <stdio.h>
+int _isalpha(int c)
+{ 
+	printf("qwerty\n");
+	return (0);
+}
+4-strpbrk.c/    0           0     0     644     94        `
+#include <stdio.h>
+
+char *_strpbrk(char *s, char *accept)
+{
+	printf("qwerty");
+	return (0);
+}
+5-strstr.c/     0           0     0     644     101       `
+#include <stdio.h>
+
+char *_strstr(char *haystack, char *needle)
+{
+	printf("qwertyuy");
+	return(0);
+}
+
+6-abs.c/        0           0     0     644     72        `
+#include <stdio.h>
+int _abs(int n)
+{
+	printf("qwertyu");
+	return (0);
+}
+9-strcpy.c/     0           0     0     644     94        `
+#include <stdio.h>
+
+char *_strcpy(char *dest, char *src)
+{
+	printf("qwertyu");
+	return (0);
+}
+main.c/         0           0     0     644     148       `
+#include "main.h"
+
+int main(void)
+{
+    _puts("\"At the end of the day, my goal was to be the best hacker\"\n\t- Kevin Mitnick");
+    return (0);
+}
+_putchar.c/     0           0     0     644     77        `
+#include <stdio.h>
+
+int _putchar(char c)
+{
+	printf("qwerty");
+	return (0);
+}
+
