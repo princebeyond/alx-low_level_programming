@@ -1,6 +1,6 @@
 #include < stdio.h>
 
-int _isalpha(int c)
+int _isupper(int c)
 {
 	printf("qwerty\n");
 	return (0);
