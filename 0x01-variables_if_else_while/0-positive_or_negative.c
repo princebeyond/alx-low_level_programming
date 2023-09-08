@@ -1,14 +1,26 @@
 #include <stdlib.h>
 #include <time.h>
-/* program will assign a random number to the variable n */
+/* more headers goes there */
+#include <stdio.h>
 
-/* main - Entry point */
+/* betty style doc for function main goes there */
+/**
+ * main - main function
+ *
+ * Return: always 0
+ */
 int main(void)
 {
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("%d is ")
+	/* your code goes there */
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negtive\n", n);
 	return (0);
 }
