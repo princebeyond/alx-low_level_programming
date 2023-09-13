@@ -11,7 +11,7 @@ int main(void)
 
 	printf("%d, %d, ", f, s);
 
-	for (i = 3; i < 50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		int nxt = f + s;
 
