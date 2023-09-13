@@ -6,15 +6,15 @@
  */
 int main(void)
 {
+	int i;
 	int f = 1, s = 2;
 
 	printf("%d, %d, ", f, s);
 
-	int i;
-
 	for (i = 3; i <= 50; i++)
 	{
 		int nxt = f + s;
+
 		printf("%d, ", nxt);
 
 		f = s;
