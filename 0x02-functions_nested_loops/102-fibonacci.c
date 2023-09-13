@@ -7,20 +7,24 @@
 int main(void)
 {
 	int i;
-	int f = 1, s = 2;
+	unsigned long f = 1, s = 2, nxt;
 
-	printf("%d, %d, ", f, s);
+	printf("%lu, %lu, ", f, s);
 
 	for (i = 3; i <= 50; i++)
 	{
-		int nxt = f + s;
+		nxt = f + s;
 
-		printf("%d, ", nxt);
+
+		printf("%lu", nxt);
 
 		f = s;
 		s = nxt;
-	}
-	printf("\n");
 
+		if (i == 50)
+			printf("\n");
+		else
+			printf(", ");
+	}
 	return (0);
 }
