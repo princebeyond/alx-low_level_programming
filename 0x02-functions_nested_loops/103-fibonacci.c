@@ -23,7 +23,7 @@ int main(void)
 	second = nxt;
 	}
 
-	printf("%d: %d\n", limit, sum);
+	printf("%d\n", sum);
 
 	return (0);
 }
