@@ -10,7 +10,8 @@ int _isupper(int c)
 	if (c == 'A')
 	{
 		return (1);
-	} else
+	}
+	else
 	{
 		return (0);
 	}
