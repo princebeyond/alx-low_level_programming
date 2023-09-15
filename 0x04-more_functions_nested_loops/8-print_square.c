@@ -1,22 +1,28 @@
 #include "main.h"
 /**
- * print_squar - ahh d
- * @n: egg v
+ * print_square - ahh d
+ * @size: egg v
  *
- * Return: 1 or 0.
  */
-void print_line(int n)
+void print_square(int size)
 {
-	int i;
-
-	if (n <= 0)
+	if (size <= 0)
 	{
-		for (i = 0; i <= n; i++)
-		{
-			_putchar('_');
-		}
 		_putchar('\n');
 	}
-	_putchar('\n');
-}
+	else
+	{
+		int i;
+		int j;
 
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
+}
+	
