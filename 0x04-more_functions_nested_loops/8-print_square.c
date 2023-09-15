@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- * print_square - ahh d
- * @size: egg v
+ * print_squar - ahh d
+ * @n: egg v
  *
  * Return: 1 or 0.
  */
-void print_square(int size)
+void print_line(int n)
 {
 	int i;
 
-	if (size <= 0)
+	if (n <= 0)
 	{
-		for (i = 0; i <= size; i++)
+		for (i = 0; i <= n; i++)
 		{
-			_putchar('#');
+			_putchar('_');
 		}
 		_putchar('\n');
 	}
