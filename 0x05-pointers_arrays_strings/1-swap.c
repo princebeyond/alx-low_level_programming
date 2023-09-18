@@ -6,11 +6,8 @@
  */
 void swap_int(int *a, int *b)
 {
-	int MIN = 98;
-	int MAX = 42;
-
-	*a = MAX;
-	*b = MIN;
-
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
