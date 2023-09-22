@@ -2,23 +2,35 @@
 #include <ctype.h>
 /**
  * cap_string -  function that capitalizes all words of a string.
- * @src: cap strings
+ * @str: cap strings
  * Return: success
  */
-char *cap_string(char *src)
+char *cap_string(char *str)
 {
 	int i = 0;
-
-	while (src[i] != '\0')
+	
+	while (str[i])
 	{
-		if (isalpha(src[i]))
-		{
-			if (i == 0 || !isalpha(src[i - 1]))
-			{
-				src[i] = toupper(src[i]);
-			}
-		}
+	while (!(str[i] >= 'a' && str[i] <= 'z'))
 		i++;
+	if (str[i - 1] == ' ' ||
+	str[i - 1] == '\t' ||
+	str[i - 1] == '\n' ||
+	str[i - 1] == ',' ||
+	str[i - 1] == ';' ||
+	str[i - 1] == '.' ||
+	str[i - 1] == '!' ||
+	str[i - 1] == '?' ||
+	str[i - 1] == '"' ||
+	str[i - 1] == '(' ||
+	str[i - 1] == ')' ||
+	str[i - 1] == '{' ||
+	str[i - 1] == '}' ||
+	i == 0)
+	str[i] -= 32;
+	i++;
 	}
-	return (src);
+
+	return (str);
+
 }
