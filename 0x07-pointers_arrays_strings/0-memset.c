@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * _memset - function fills the first n bytes 
- * @n: fills the first n bytes 
+ * _memset - function fills the first n bytes
+ * @n: fills the first n bytes
  * @b: constant bytes
  * @s: pointer
  * Return: pointer to the memory area s.
