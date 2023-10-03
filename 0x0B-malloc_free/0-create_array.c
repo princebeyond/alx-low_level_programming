@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * create_array - creating array
- * @size: size 
+ * @size: size
  * @c: char
  * Return: 0.
  */
@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	array = (char *)malloc (sizeof(char) * (size + 1));
+	array = (char *)malloc(sizeof(char) * (size + 1));
 	if (array == NULL)
 	{
 		return (NULL);
