@@ -16,11 +16,14 @@ char *str_concat(char *s1, char *s2)
 	char *tt;
 
 	tt = (char *)malloc(tl);
-	if (tt = NULL)
+
+	if (tt == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(tt, s1);
+	strcpy(tt, s1)i;
+
 	strcat(tt, s2);
+
 	return (tt);
 }
