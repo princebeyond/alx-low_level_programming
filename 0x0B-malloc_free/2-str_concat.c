@@ -20,15 +20,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-
-	if (s1 != NULL)
-	{
-		strcpy(tt, s1);
-	}
-	if (s2 != NULL)
-	{
-		strcat(tt, s2);
-	}
-
+	strcpy(tt, s1);
+	strcat(tt, s2);
 	return (tt);
 }
