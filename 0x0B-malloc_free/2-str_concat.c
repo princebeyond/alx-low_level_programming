@@ -15,19 +15,16 @@ char *str_concat(char *s1, char *s2)
 	size_t tl = len + len2 + 1;
 	char *tt;
 
-	if ((s1 == NULL || s2 == NULL))
-	{
-		return (NULL);
-	}
 	tt = (char *)malloc(tl);
 
-	if (tt == NULL)
+	if (s1 != NULL)
 	{
-		return (NULL);
+		strcpy(tt, s1);
 	}
-	strcpy(tt, s1);
-
-	strcat(tt, s2);
+	if (s2 != NULL)
+	{
+		strcat(tt, s2);
+	}
 
 	return (tt);
 }
