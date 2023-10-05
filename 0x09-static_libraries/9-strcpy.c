@@ -5,7 +5,7 @@
  * @dest: hshshsj
  * @src: sjshsjjs
  *
- * Rerurn: 0. success.
+ * Return: 0. success.
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -14,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	while (*src != '\0')
 	{
 		*dest = *src;
-		dest ++;
+		dest++;
 		src++;
 	}
 	*dest = '\0';

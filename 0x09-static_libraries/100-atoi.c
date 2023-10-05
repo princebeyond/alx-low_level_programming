@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _atoi - covert 
+ * _atoi - covert
  * @s: the string
  * Return: integer
  */
