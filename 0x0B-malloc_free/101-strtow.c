@@ -25,14 +25,14 @@ int count_words(char *str)
 		if (is_space(*str))
 		{
 			in_word = 0;
-		} else if (!in_word)
+		}
+		else if (!in_word)
 		{
 			in_word = 1;
 			count++;
 		}
 		str++;
-	}
-	return (count);
+	}	return count;
 }
 /**
  * strtow - working
@@ -41,66 +41,40 @@ int count_words(char *str)
  */
 char **strtow(char *str)
 {
-	int word_index = 0;
 	int word_length = 0;
-	int in_word = 0;
-	int num_words;
-	char **words;
+	char **words = NULL, *start = NULL;
+	int i;
 
-	if (str == NULL || *str == '\0')
-	{
-		return (NULL);
-	}
-	num_words = count_words(str);
-	if (num_words == 0)
-	{
-		return (NULL);
-	}
-	words = (char **)malloc((num_words + 1) * sizeof(char *));
+	if (str == NULL || *str == '\0' || count_words(str) == 0)
+		return NULL;
 
+	words = (char **)malloc((count_words(str) + 1) * sizeof(char *));
 	if (words == NULL)
+		return NULL;
+
+	for (i = 0; str && *str; i++)
 	{
-		return (NULL);
-	}
-	while (*str)
-	{
-		if (is_space(*str))
-		{
-			if (in_word)
-			{
-				words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
-				if (words[word_index] == NULL)
-				{
-					return (NULL);
-				}
-				strncpy(words[word_index], str - word_length, word_length);
-				words[word_index][word_length] = '\0';
-				word_index++;
-				word_length = 0;
-				in_word = 0;
-			}
-		}
-		else
-		{
-			word_length++;
-			in_word = 1;
-		}
+		while (*str && is_space(*str))
 		str++;
-	}
 
-	if (in_word)
+	start = str;
+	while (*str && !is_space(*str))
 	{
-		words[word_index] = (char *)malloc((word_length + 1) * sizeof(char));
-		if (words[word_index] == NULL)
-		{
-			return (NULL);
-		}
-		strncpy(words[word_index], str - word_length, word_length);
-		words[word_index][word_length] = '\0';
-		word_index++;
+		str++;
+		word_length++;
 	}
 
-	words[word_index] = NULL;
+	words[i] = (char *)malloc((word_length + 1) * sizeof(char));
+	if (words[i] == NULL)
+		return NULL;
 
-	return (words);
+	strncpy(words[i], start, word_length);
+	words[i][word_length] = '\0';
+	word_length = 0;
+	}
+
+	words[count_words(str)] = NULL;
+
+	return words;
 }
+
