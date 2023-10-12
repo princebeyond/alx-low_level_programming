@@ -1,23 +1,23 @@
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * print_all - tst 2
+ * @format: format
+ */
 void print_all(const char *const format, ...)
 {
 	va_list args;
-	const char *separator = "";
+	char *str, *separator = "";
 	int i = 0;
-	char c;
-	char *s;
 
 	va_start(args, format);
 
-	while (format && format[i])
+	while (format[i])
 	{
 		switch (format[i])
 		{
 			case 'c':
-			c = (char)va_arg(args, int);
-			printf("%s%c", separator, c);
+			printf("%s%c", separator, va_arg(args, int));
 			break;
 			case 'i':
 			printf("%s%d", separator, va_arg(args, int));
@@ -26,18 +26,19 @@ void print_all(const char *const format, ...)
 			printf("%s%f", separator, va_arg(args, double));
 			break;
 			case 's':
-			s = va_arg(args, char *);
-			if (s == NULL)
+			str = va_arg(args, char *);
+			if (!str)
 			{
-				printf("%s(nil)", separator);
+				str = "(nill)";
 			}
 			else
 			{
-				printf("%s%s", separator, s);
+				printf("%s%s", separator, str);
 			}
 			break;
 			default:
-			break;
+			i++;
+			continue;
 	}
 	separator = ", ";
 	i++;
