@@ -6,9 +6,9 @@
  */
 void print_all(const char *const format, ...)
 {
-	va_list list;
 	char *str, *separator = "";
 	int i = 0;
+	va_list list;
 
 	va_start(list, format);
 
