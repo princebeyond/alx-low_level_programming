@@ -2,7 +2,7 @@
 #include <stdarg.h>
 /**
  * print_numbers - p n
- * @separator: stri to be printed 
+ * @separator: stri to be printed
  * @n: num
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
@@ -10,6 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int num;
 	va_list args;
+
 	va_start(args, n);
 
 	for (i = 0; i < n; i++)
