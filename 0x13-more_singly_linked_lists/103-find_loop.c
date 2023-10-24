@@ -1,39 +1,32 @@
 #include "lists.h"
-#include <stdlib.h>
 /**
- * free_listint_safe - free
- * @h: pointer
+ * find_listint_loop - find list
+ * @head: pointer
  *
- * Return: number
+ * Return: success
  */
-size_t free_listint_safe(listint_t **h)
+listint_t *find_listint_loop(listint_t *head)
 {
-	size_t len = 0;
-	int di;
-	listint_t *temp;
+	listint_t *tortoise = head;
+	listint_t *hare = head;
 
-	if (!h || !*h)
-		return (0);
-
-	while (*h)
+	while (tortoise && hare && hare->next)
 	{
-		di = *h - (*h)->next;
-		if (di > 0)
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+
+		if (tortoise == hare)
 		{
-			temp = (*h)->next;
-			free(*h);
-			*h = temp;
-			len++;
-		}
-		else
-		{
-			free(*h);
-			*h = NULL;
-			len++;
-			break;
+			tortoise = head;
+			while (tortoise != hare)
+			{
+				tortoise = tortoise->next;
+				hare = hare->next;
+
+			}
+			return (tortoise);
 		}
 	}
-	*h = NULL;
 
-	return (len);
+	return (NULL);
 }
